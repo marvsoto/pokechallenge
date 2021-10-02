@@ -1,38 +1,223 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 10px;
+  background: #F7F9F9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  padding: 24px 2%;
+  height: 100px;
+}
+
+.logo img {
+  width: 240px;
+}
+
+.favorite-link {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #333;
+  justify-content: flex-end;
+  text-decoration: none;
+  min-width: 220px;
+}
+  .favorite-link img {
+    width: 32px;
+    margin-right: 8px;
+  }
+
+.main-search {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 0 0 0;
+}
+  .main-search form {
+    display: block;
+    width: 50%;
+    min-width: 300px;
+  }
+
+  .main-search input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 60px;
+    transition: all ease 0.3s;
+  }
+
+  .main-search input:focus {
+    border-color: #185FA7;
+    border-width: 2px;
+  }
+
+.pokemon-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 300px;
+  max-width: 680px;
+  margin: 24px auto;
+  padding: 4%;
+  background: #FFFFFF;
+  box-shadow: 0px 32px 32px rgba(123, 121, 103, 0.04), 0px 16px 16px rgba(123, 121, 103, 0.04), 0px 8px 8px rgba(123, 121, 103, 0.04), 0px 4px 4px rgba(123, 121, 103, 0.04), 0px 2px 2px rgba(123, 121, 103, 0.04), 0px 0px 14px rgba(123, 121, 103, 0.04);
+  border-radius: 16px;
+}
+.pokemon-card img {
+  width: 40%;
+  margin-right: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+.pokemon-card h1 {
+  margin-top: 48px;
+  text-transform: capitalize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pokemon-card h1 span {
+  opacity: 0.3;
+  font-size: 0.6em;
+}
+
+.pokemon-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pokemon-card ul li.type {
+  float: left;
+  padding: 2px 4px;
+  margin: 0 4px 4px 0;
+  font-size: 13px;
+  border-radius: 2px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.pokemon-card ul li.type.flying{
+  background: #A890F0;
+}
+
+.pokemon-card ul li.type.electric{
+  background: #F8D030;
+}
+
+.pokemon-card ul li.type.normal{
+  background: #504e54;
+}
+
+.pokemon-card ul li.type.fire{
+  background: #F08030;
+}
+
+.pokemon-card ul li.type.water{
+  background: #6890F0;
+}
+
+.pokemon-card ul li.type.grass{
+  background: #78C850;
+}
+.pokemon-card ul li.type.ice{
+  background: #98D8D8;
+}
+
+.pokemon-card ul li.type.fighting{
+  background: #C03028;
+}
+
+.pokemon-card ul li.type.poison{
+  background: #A040A0;
+}
+
+.pokemon-card ul li.type.ground{
+  background: #E0C068;
+}
+
+.pokemon-card ul li.type.psychic{
+  background: #F85888;
+}
+
+.pokemon-card ul li.type.bug{
+  background: #A8B820;
+}
+
+.pokemon-card ul li.type.rock{
+  background: #B8A038;
+}
+
+.pokemon-card ul li.type.ghost{
+  background: #705898;
+}
+
+.pokemon-card ul li.type.dark{
+  background: #705848;
+}
+
+.pokemon-card ul li.type.dragon{
+  background: #7038F8;
+}
+
+.pokemon-card ul li.type.steel{
+  background: #B8B8D0;
+}
+
+.pokemon-card ul li.type.fairy{
+  background: #F0B6BC;
+}
+
+
+.pokemon-card button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: #ddd;
+}
+.pokemon-card button:hover {
+  color: #999;
+}
+
+.pokemon-card button:focus {
+  outline: 0;
+}
+
+.pokemon-card button.favorite {
+  color: #FC5E5E;
+}
+
+.pokemon-card button.favorite:hover {
+  opacity: 0.7;
+}
+
+.empty {
+  position: relative;
+  text-align: center;
+  width: 60%;
+  margin: 24px auto;
+  padding: 4%;
+  background: #FFFFFF;
+  box-shadow: 0px 32px 32px rgba(123, 121, 103, 0.04), 0px 16px 16px rgba(123, 121, 103, 0.04), 0px 8px 8px rgba(123, 121, 103, 0.04), 0px 4px 4px rgba(123, 121, 103, 0.04), 0px 2px 2px rgba(123, 121, 103, 0.04), 0px 0px 14px rgba(123, 121, 103, 0.04);
+  border-radius: 16px;
+}
+
+.empty a {
+  color: #FC5E5E;
+  text-decoration: none;
+}
+
+.empty a:hover {
+  text-decoration: underline;
 }

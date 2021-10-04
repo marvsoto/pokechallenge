@@ -15,7 +15,17 @@ Welcome to Pokechallenge
 - Remove a Pokémon from my list.
 - Save my favorite Pokémon even if I refresh my page.
 
+### Required
+
+- Functional Components
+- React Hooks
+- At least one custom hook
+- Redux
+- Style your components with styled-components
+
 ### Instructions
-- Create a branch with the following structure challenge/yourName or challenge_your_name
-- 
+
+- *npm start* to run the project
+- Create a branch with the following structure **challenge/yourName** or **challenge_your_name**
+- Enjoy the challenge!
 

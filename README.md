@@ -18,7 +18,7 @@ Welcome to Pokechallenge
 ### Required
 
 - Functional Components
-- React Hooks
+- React Hooks 
 
 
 ### Bonus

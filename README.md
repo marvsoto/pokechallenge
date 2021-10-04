@@ -19,15 +19,15 @@ Welcome to Pokechallenge
 
 - Functional Components
 - React Hooks
-- Style your components with styled-components
 
 
 ### Bonus
 
 Consider doing any of these points, we will give you extra points if you do it.
 
-- Custom Hooks
 - Redux
+- Custom Hooks
+- Style your components with styled-components
 
 ### Instructions
 
